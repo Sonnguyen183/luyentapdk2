@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in3">Nhập cạnh a: </label><input type="text" id="in3"><br>
+<input type="button" value="Chạy" onclick="b3()">
+<p id="kqb3">.</p>
+<script>
+    function b3() {
+        let canhA=+document.getElementById("in3").value;
+        document.getElementById("kqb3").innerText="S= "+canhA*canhA;
+    }
+</script>
+
+
+</body>
+</html>

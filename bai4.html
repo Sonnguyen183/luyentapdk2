@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in4">Nhập cạnh a: </label><input type="text" id="in4"><br>
+<label for="in4_1">Nhập cạnh b: </label><input type="text" id="in4_1"><br>
+<input type="button" value="Chạy" onclick="b4()">
+<p id="kqb4">.</p>
+<script>
+    function b4() {
+        let aBai4=+document.getElementById("in4").value;
+        let bBai4=+document.getElementById("in4_1").value;
+        document.getElementById("kqb4").innerText="S= "+aBai4*bBai4;
+    }
+</script>
+</body>
+</html>

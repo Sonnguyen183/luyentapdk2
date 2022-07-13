@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in5">Nhập cạnh kề a: </label><input type="text" id="in5"><br>
+<label for="in5_1">Nhập cạnh kề b: </label><input type="text" id="in5_1"><br>
+<input type="button" value="Chạy" onclick="b5()">
+<p id="kqb5">.</p>
+<script>
+    function b5() {
+        let aBai5=+document.getElementById("in5").value;
+        let bBai5=+document.getElementById("in5_1").value;
+        document.getElementById("kqb5").innerText="S= "+1/2*aBai5*bBai5;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in8">Nhập Tuổi: </label><input type="text" id="in8"><br>
+<input type="button" value="Chạy" onclick="b8()">
+<p id="kqb8">.</p>
+<script>
+    function b8() {
+        let tuoiNguoi=+document.getElementById("in8").value;
+        if (tuoiNguoi<=120&&tuoiNguoi>0){
+            document.getElementById("kqb8").innerText=tuoiNguoi+" là tuổi của một người";
+        }
+        else {document.getElementById("kqb8").innerText=tuoiNguoi+" không là tuổi của một người";}
+    }
+</script>
+</body>
+</html>

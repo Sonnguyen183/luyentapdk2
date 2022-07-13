@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in6">Nhập a: </label><input type="text" id="in6"><br>
+<label for="in6_1">Nhập b: </label><input type="text" id="in6_1"><br>
+<input type="button" value="Chạy" onclick="b6()">
+<p id="kqb6">.</p>
+<script>
+    function b6() {
+        let aBai6 = +document.getElementById("in6").value;
+        let bBai6 = +document.getElementById("in6_1").value;
+        if (aBai6 == 0 && bBai6 == 0) {
+            document.getElementById("kqb6").innerText = "PT vô số nghiệm ";
+        } else if (aBai6 == 0 && bBai6 != 0) {
+            document.getElementById("kqb6").innerText = "PT vô nghiệm ";
+        } else {
+            document.getElementById("kqb6").innerText = "PT có nghiệm duy nhất x= " + -bBai6 / aBai6;
+        }
+    }
+</script>
+</body>
+</html>

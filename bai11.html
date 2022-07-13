@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in11">Nhập Thu Nhập: </label><input type="text" id="in11"> triệu<br>
+<input type="button" value="Chạy" onclick="b11()">
+<p id="kqb11">.</p>
+<script>
+    function b11() {
+        let thuNhap = +document.getElementById("in11").value;
+        let thue;
+        if (thuNhap<80){
+            if (thuNhap<52){
+                if (thuNhap<32){
+                    if (thuNhap<18){
+                        if (thuNhap<10){
+                            if (thuNhap<5){
+                                thue=thuNhap/100*10;
+                            }
+                        }else{thue=thuNhap/100*15;}
+                    }else{thue=thuNhap/100*20;}
+                }else{thue=thuNhap/100*25;}
+            }else{thue=thuNhap/100*30;}
+        }else{thue=thuNhap/100*35;}
+        document.getElementById("kqb11").innerText="Phải chịu "+thue+" triệu tiền thuế";
+    }
+</script>
+</body>
+</html>

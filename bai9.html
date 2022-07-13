@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in9">Nhập a: </label><input type="text" id="in9"><br>
+<label for="in9_1">Nhập b: </label><input type="text" id="in9_1"><br>
+<label for="in9_2">Nhập c: </label><input type="text" id="in9_2"><br>
+<input type="button" value="Chạy" onclick="b9()">
+<p id="kqb9">.</p>
+<script>
+    function b9() {
+        let aBai9=+document.getElementById("in9").value;
+        let bBai9=+document.getElementById("in9_1").value;
+        let cBai9=+document.getElementById("in9_2").value;
+        if (aBai9>0&&bBai9>0&&cBai9>0){
+            if (aBai9+bBai9>cBai9){
+                if (bBai9+cBai9>aBai9){
+                    if (aBai9+cBai9>bBai9){
+                        document.getElementById("kqb9").innerText=" a,b,c là cạnh của 1 tam giác";
+                    }
+                }
+            }
+        }else {
+            document.getElementById("kqb9").innerText=" a,b,c không là cạnh của 1 tam giác";
+        }
+    }
+</script>
+</body>
+</html>

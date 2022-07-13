@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="in7">Nhập a: </label><input type="text" id="in7"><br>
+<label for="in7_1">Nhập b: </label><input type="text" id="in7_1"><br>
+<label for="in7_2">Nhập c: </label><input type="text" id="in7_2"><br>
+<input type="button" value="Chạy" onclick="b7()">
+<p id="kqb7">.</p>
+<script>
+    function b7() {
+        let aBai7=+document.getElementById("in7").value;
+        let bBai7=+document.getElementById("in7_1").value;
+        let cBai7=+document.getElementById("in7_2").value;
+        let deltaBai7=(bBai7*bBai7)-4*aBai7*cBai7;
+        if (aBai7&&bBai7&&cBai7==0){
+            document.getElementById("kqb7").innerText="PT vô số nghiệm ";
+        }
+        else if (deltaBai7<0){
+            document.getElementById("kqb7").innerText="PT vô nghiệm ";
+        }
+        else if (deltaBai7==0){
+            document.getElementById("kqb7").innerText="PT có nghiệm kép x1=x2= "+-bBai7/2*aBai7;
+        }
+        else if (deltaBai7>0){
+            let nghiemx1=(-bBai7+Math.sqrt(deltaBai7))/(2*aBai7);
+            let nghiemx2=(-bBai7-Math.sqrt(deltaBai7))/(2*aBai7);
+            document.getElementById("kqb7").innerHTML="PT có 2 nghiệm phân biệt:"+"<br>"+"x1= "+nghiemx1+"<br>"+"x2= "+nghiemx2;
+        }
+    }
+</script>
+</body>
+</html>
